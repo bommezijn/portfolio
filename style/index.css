@@ -1,35 +1,75 @@
-:root{
-    --test-color: #ffcc00;
-}
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-nav{
-    background-color: var(--test-color);
-    display: flex;
-    flex-wrap: wrap;
+/* IMPORT FONT */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.02em;
 }
 
-nav > img{
-    flex-grow: 4;
-    flex-basis: 3vw;
+nav {
+  background-color: #F5F3F5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
 }
 
-nav > ul{
-    list-style-type: none;
-    flex-grow: 2;
+nav ul {
+  margin-left: auto;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  list-style-type: none;
 }
 
 nav li {
-    display: inline-block;
-    margin: 1em;
-    padding: 1em;
-    background-color: #333;
+  display: inline-block;
 }
 
-ul > li > a{
-    color: #fff;
+nav a {
+  display: block;
+  position: relative;
+  padding: 2em;
+  color: #000000;
+  text-decoration: none;
+  -webkit-transition: ease-in 0.3s;
+  transition: ease-in 0.3s;
 }
+
+nav a:hover {
+  color: #ffffff;
+  background: #64B6AC;
+}
+
+nav a:hover::before {
+  content: "";
+  width: 0%;
+  bottom: 0em;
+}
+
+nav a:hover::after {
+  content: "";
+  position: absolute;
+  border: 3px solid #274690;
+  width: 97%;
+  left: 0%;
+  bottom: 0em;
+}
+
+.card {
+  max-width: 20vw;
+  background: #274690;
+}
+
+.card > .card__img {
+  max-width: inherit;
+}
+
+/* Default styling for the project container */
+/*# sourceMappingURL=index.css.map */

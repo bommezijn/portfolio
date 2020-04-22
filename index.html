@@ -11,38 +11,59 @@
 
 <body>
     <nav>
-        <img src="Logo.svg" alt="">
+        <img src="style/img/logo.svg" alt="">
         <ul>
             <li><a href="">Projects</a></li>
             <li><a href="">About</a></li>
             <li><a href="">Contact</a></li>
         </ul>
     </nav>
-    <main id="Projects">
-        <article class="project--container">
-            <h2 class="project--title">Project Title</h2>
-            <img src="/" alt="a photo" class="project-image">
-            <p class="project--subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam aliquid
-                asperiores ad eveniet.</p>
-        </article>
-        <article class="contact">
-            <form action="" method="post">
-                <fieldset>
-                    <legend>contact info</legend>
-                    <label for="Name">Full Name</label>
-                    <input type="text" name="" id="FullName" placeholder="Your Name">
+    <main>
+        <section class="parent">
+            <!-- <article class="project--grid div1">
+                <h2 class="project--title">Project Title</h2>
+                <img src="/style/img/placeholder.jpeg" alt="" class="project-image">
+                <p class="project--text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam aliquid
+                    asperiores ad eveniet.</p>
+            </article> -->
 
-                    <label for="Email">E-mail Address</label>
-                    <input type="email" name="" id="EmailAddress" aria-placeholder="firstpart@secondpart.com">
+            <section id="projects">
+                <article class="card">
+                    <img src="/style/img/placeholder.jpeg" alt="" class="card__img">
+                    <ul class="card__tags">
+                        <li class="card__ul__crumb">item</li>
+                        <li class="card__ul__crumb">meti</li>
+                        <li class="card__ul__crumb">temi</li>
+                    </ul>
+                    <h2 class="card__title">Title proj</h2>
+                    <p class="card__text">This is the text of a project</p>
 
-                    <br>
+                </article>
+            </section>
 
-                    <label for="information">Your message</label>
-                    <br>
-                    <textarea name="" id="UserQuestion" cols="30" rows="10" placeholder="What do you want to write me?"></textarea>
-                </fieldset>
-            </form>
-        </article>
+
+        </section>
+        <section>
+            <article class="contact">
+                <form action="" method="post">
+                    <fieldset>
+                        <legend>contact info</legend>
+                        <label for="Name">Full Name</label>
+                        <input type="text" name="" id="FullName" placeholder="Your Name">
+
+                        <label for="Email">E-mail Address</label>
+                        <input type="email" name="" id="EmailAddress" aria-placeholder="firstpart@secondpart.com">
+
+                        <br>
+
+                        <label for="information">Your message</label>
+                        <br>
+                        <textarea name="" id="UserQuestion" cols="30" rows="10"
+                            placeholder="What do you want to write me?"></textarea>
+                    </fieldset>
+                </form>
+            </article>
+        </section>
     </main>
     <footer>
         <a href=""><img src="" alt="email"></a>
