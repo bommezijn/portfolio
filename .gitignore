@@ -1,2 +1,2 @@
-#Hides the extra folder for prying eyes.
-extra
+# Hide the following folders
+.vscode
