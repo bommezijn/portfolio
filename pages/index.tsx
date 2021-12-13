@@ -10,10 +10,10 @@ TODO: Convert className to {styles.CLASSNAME}
 const Home: NextPage = () => {
   return (
     <main className={styles.container}>
-      <div id="content">
-        <section className="grid">
-          <article className="intro grid-item">
-            <h2 className="name">Nathan Bommezijn</h2>
+      <div id='content'>
+        <section className='grid'>
+          <article className='intro grid-item'>
+            <h2 className='name'>Nathan Bommezijn</h2>
             <p>Some text</p>
           </article>
           {/* loop to add X amount of projects with title, desc. photo? */}
