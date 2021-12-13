@@ -1,14 +1,15 @@
-export default function Home() {
+import type { NextPage } from 'next'
+import Head from 'next/head'
+import Image from 'next/image'
+import styles from '../styles/Home.module.css'
 
+/* 
+TODO: Convert className to {styles.CLASSNAME}
+*/
+
+const Home: NextPage = () => {
   return  (
-    <main>
-      <nav>
-        <ul>
-          <li>Nathan Bommezijn</li>
-          <li>Projects</li>
-          <li>Contact</li>
-        </ul>
-      </nav>
+    <main className={styles.container}>
       <div id="content">
         <section className="grid">
           <article className="intro grid-item">
@@ -40,3 +41,5 @@ export default function Home() {
     </main>
   )
 }
+
+export default Home
