@@ -2,6 +2,8 @@ import Link from 'next/link'
 import React, { FunctionComponent } from 'react'
 import styles from './style.module.css'
 
+const test
+
 const Footer: FunctionComponent = () => {
   return (
     <footer className={styles.footer}>
