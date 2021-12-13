@@ -1,0 +1,29 @@
+/* FOOTER CSS */
+.footer {
+  padding: 1rem;
+  margin: 0;
+  /* background-color: #000000;
+  color: #ffffff; */
+  background-color: #ffcc0020;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1em;
+}
+
+/* Padding and Margin reset, does break the UL */
+/* .footer * {
+  padding: 0;
+  margin: 0;
+} */
+
+.footer>p:first-child {
+  margin: 0;
+}
+
+.footer>* {
+  border: 1px solid red;
+}
+
+.outro {
+  grid-column: 1/-1;
+}
