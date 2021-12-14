@@ -21,7 +21,7 @@ const Card = (props: CardProps) => {
   https://github.com/typescript-cheatsheets/react/blob/main/README.md#function-components
 */
   return (
-    <Link href={`/projects/${encodeURIComponent(props.slug)}`}>
+    <Link passHref href={`/projects/${encodeURIComponent(props.slug)}`}>
       <article className={styles.card}>
         <Image src='/vercel.svg' alt='' width={250} height={250} />
         <h3>{props.title}</h3>

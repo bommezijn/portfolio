@@ -1,17 +1,19 @@
 import React, { FunctionComponent } from 'react';
-import styles from './style.module.css'
-
+import Link from 'next/link';
+import styles from './style.module.css';
 
 const NavBar: FunctionComponent = () => {
   return (
     <nav className={`${styles.navBar} ${styles.mildShadow}`}>
       <ul>
-        <li>Bommezijn</li>
+        <Link passHref href='/'>
+          <li>Bommezijn</li>
+        </Link>
         <li>Projects</li>
         <li>Contact</li>
       </ul>
     </nav>
-  )
-}
+  );
+};
 
-export default NavBar
+export default NavBar;
