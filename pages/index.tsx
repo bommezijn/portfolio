@@ -1,11 +1,10 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import Card from '../components/Card'
-import styles from '../styles/Home.module.css'
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Image from 'next/image';
+import Card from '../components/Card';
+import styles from '../styles/Home.module.css';
 
 const Home: NextPage = () => {
-
   return (
     <main className={styles.container}>
       <div id='content'>
@@ -14,12 +13,12 @@ const Home: NextPage = () => {
             <h2 className='name'>Nathan Bommezijn</h2>
             <p>Some text</p>
           </article>
-          <Card title='tete' shortDesc='kekeke' />
+          <Card title='tete' shortDesc='kekeke' slug='init' />
           {/* loop to add X amount of projects with title, desc. photo? */}
         </section>
       </div>
     </main>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
