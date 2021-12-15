@@ -1,8 +1,10 @@
 /* CARD */
 .card {
-  width: max-content;
+  /* width: max-content; */
+  width: 100%;
   background-color: var(--gray-100);
   padding: 1rem;
   border-radius: 0.5rem;
   box-shadow: 0 4px 4px 1px var(--tertary-100);
+  cursor: pointer;
 }

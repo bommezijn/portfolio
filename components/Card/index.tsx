@@ -10,9 +10,7 @@ type CardProps = {
 };
 
 /* 
-TODO: Wrap Card with Link tag, nav to project page
 TODO: Style the card properly, with the idea of the concept
-TODO: Style the grid container in Home.
 */
 
 const Card = (props: CardProps) => {

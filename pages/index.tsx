@@ -8,11 +8,14 @@ const Home: NextPage = () => {
   return (
     <main className={styles.container}>
       <div id='content'>
-        <section className='grid'>
-          <article className='intro grid-item'>
+        <section className={styles.grid}>
+          <article className={`${styles.intro} ${styles.gridItem}`}>
             <h2 className='name'>Nathan Bommezijn</h2>
             <p>Some text</p>
           </article>
+          <Card title='tete' shortDesc='kekeke' slug='init' />
+          <Card title='tete' shortDesc='kekeke' slug='init' />
+          <Card title='tete' shortDesc='kekeke' slug='init' />
           <Card title='tete' shortDesc='kekeke' slug='init' />
           {/* loop to add X amount of projects with title, desc. photo? */}
         </section>
