@@ -1,12 +1,7 @@
 .container {
-  /* max-width: 100rem;
-  margin-left: auto;
-  margin-right: auto; */
-  /* min-height: 100vh; */
-  margin: 0;
-  margin-bottom: 2rem;
+  max-width: 100rem;
+  margin: 0 auto;
   padding: 0 2rem;
-  /* background-color: rgba(178, 178, 178, 0.2); */
 }
 
 .grid {
@@ -16,7 +11,6 @@
   padding-top: 1rem;
 }
 
-
 .intro {
   grid-column: 1 / -1;
   height: 20rem;
@@ -24,13 +18,9 @@
   /* Content specific */
   display: grid;
   align-content: center;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
   /* background-color: var(--main-200); */
   border-bottom: 1px solid #00000025;
-}
-
-.intro > * {
-  /* border-inline: 1px dotted green; */
 }
 
 .titleContainer > * {
@@ -38,18 +28,28 @@
 }
 
 .intro h2 {
-  font-size: 3rem;
+  font-size: clamp(40px, 8vw, 4rem);
   font-weight: 900;
-  /* color: var(--secondary-500); */
-  color: #000;
   word-spacing: 100vw;
 }
 
-.intro:last-child {
-  color: var(--secondary-400);
-  background-color: black;
+.lead {
+  font-size: clamp(1em, 3.5vw, 1.25rem);
+  max-width: 30rem;
 }
 
+.lead span {
+  font-weight: bold;
+  color: var(--secondary-300);
+}
+
+.yellowGradient {
+  background: linear-gradient(45deg, var(--main-600), var(--main-300));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* RESPONSIVE DOHICKIES */
 /* tablet */
 @media (min-width: 768px) {
   .grid {
@@ -59,6 +59,6 @@
 /* laptop */
 @media (min-width: 1024px) {
   .grid {
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(650px, 1fr));
   }
 }

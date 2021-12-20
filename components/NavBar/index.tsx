@@ -6,11 +6,17 @@ const NavBar: FunctionComponent = () => {
   return (
     <nav className={`${styles.navBar} ${styles.mildShadow}`}>
       <ul>
-        <Link passHref href='/'>
-          <li>Bommezijn</li>
+        <Link href='/' passHref>
+          <li>
+            <a>Bommezijn</a>
+          </li>
         </Link>
-        <li>Projects</li>
-        <li>Contact</li>
+        <li>
+          <a>Projects</a>
+        </li>
+        <li>
+          <a>Contact</a>
+        </li>
       </ul>
     </nav>
   );
