@@ -30,12 +30,14 @@
 .intro h2 {
   font-size: clamp(40px, 8vw, 4rem);
   font-weight: 900;
+  font-style: italic;
   word-spacing: 100vw;
 }
 
 .lead {
   font-size: clamp(1em, 3.5vw, 1.25rem);
   max-width: 30rem;
+  margin: 1rem;
 }
 
 .lead span {
