@@ -51,7 +51,34 @@
   -webkit-text-fill-color: transparent;
 }
 
+.introCard {
+  position: relative;
+  border: 1px solid black;
+  overflow: hidden;
+  padding: 2rem;
+}
+
+.introCard p {
+  color: var(--black);
+  font-size: 1.5rem;
+}
+
+.backdrop {
+  color: var(--secondary-300);
+  font-size: clamp(25px, 12rem, 16rem);
+  position: absolute;
+  opacity: 0.2;
+  margin: 0;
+  padding: 0;
+  transform-origin: top left;
+}
+
 /* RESPONSIVE DOHICKIES */
+@media (max-width: 320px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
 /* tablet */
 @media (min-width: 768px) {
   .grid {

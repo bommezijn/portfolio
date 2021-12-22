@@ -7,6 +7,7 @@ type CardProps = {
   title: string;
   shortDesc: string;
   slug: string;
+  image: string;
 };
 
 /* 
@@ -18,10 +19,19 @@ const Card = (props: CardProps) => {
   REASON WHY NOT: explicit about return type in comparison to implicit 
   https://github.com/typescript-cheatsheets/react/blob/main/README.md#function-components
 */
+
   return (
     <Link passHref href={`/projects/${encodeURIComponent(props.slug)}`}>
       <article className={styles.card}>
-        <Image src='/vercel.svg' alt='' width={250} height={250} />
+        <Image
+          className={styles.cardImage}
+          src={`${props.image}`}
+          alt=''
+          width='50%'
+          height='50%'
+          layout='responsive'
+          objectFit='contain'
+        />
         <h3>{props.title}</h3>
         <p>{props.shortDesc}</p>
       </article>

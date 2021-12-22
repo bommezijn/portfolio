@@ -3,8 +3,8 @@ body {
   padding: 0;
   margin: 0;
   /* font-family: 'Fira Sans', sans-serif; */
-  font-family: 'Fira Sans', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Fira Sans', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
@@ -12,7 +12,8 @@ a {
   text-decoration: none;
 }
 
-h1,h2{
+h1,
+h2 {
   font-family: 'Noto Serif', serif;
   line-height: 1.1;
 }
@@ -32,41 +33,41 @@ p {
 
 :root {
   /* FFCC00 */
-  --main-100: #FFEDA3;
-  --main-200: #FFE47A;
-  --main-300: #FFDC52;
-  --main-400: #FFD429;
-  --main-500: #FFCC00;
-  --main-600: #C79F00;
+  --main-100: #ffeda3;
+  --main-200: #ffe47a;
+  --main-300: #ffdc52;
+  --main-400: #ffd429;
+  --main-500: #ffcc00;
+  --main-600: #c79f00;
   /* WHITE */
-  --white    :#FFFFFF;
-  --white-500:#F3F3F3;
-  --white-600:#D7D7D7;
+  --white: #ffffff;
+  --white-500: #f3f3f3;
+  --white-600: #d7d7d7;
   /* GRAY */
-  --gray-100: #FCFCFC;
-  --gray-200: #E7E7E7;
-  --gray-300: #D3D3D3;
-  --gray-400: #BEBEBE;
-  --gray-500: #AAAAAA;
-  --gray-600: #8E8E8E;
+  --gray-100: #fcfcfc;
+  --gray-200: #e7e7e7;
+  --gray-300: #d3d3d3;
+  --gray-400: #bebebe;
+  --gray-500: #aaaaaa;
+  --gray-600: #8e8e8e;
   /* BLACK */
-  --black-100:  :#525252;
-  --black-200:  :#3D3D3D;
-  --black-300:  :#292929;
-  --black-400:  :#141414;
-  --black:      :#000000;
+  --black-100: #525252;
+  --black-200: #3d3d3d;
+  --black-300: #292929;
+  --black-400: #141414;
+  --black: #000000;
   /* ACCENT */
-  --secondary-100: #A3B6FF;
-  --secondary-200: #7A95FF;
-  --secondary-300: #5274FF;
+  --secondary-100: #a3b6ff;
+  --secondary-200: #7a95ff;
+  --secondary-300: #5274ff;
   --secondary-400: rgb(41, 84, 255);
-  --secondary-500: #0033FF;
-  --secondary-600: #0028C7;
+  --secondary-500: #0033ff;
+  --secondary-600: #0028c7;
   /* ACCENT 2 */
-  --tertary-100:  #A3FFED;
-  --tertary-200:  #7AFFE4;
-  --tertary-300:  #52FFDC;
-  --tertary-400:  #29FFD4;
-  --tertary-500:  #00FFCC;
-  --tertary-600:  #00C79F;
+  --tertary-100: #a3ffed;
+  --tertary-200: #7affe4;
+  --tertary-300: #52ffdc;
+  --tertary-400: #29ffd4;
+  --tertary-500: #00ffcc;
+  --tertary-600: #00c79f;
 }
