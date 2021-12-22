@@ -44,7 +44,7 @@ const Home: NextPage = () => {
             title='Bloom collaboration project'
             shortDesc='A collaboration project where we created a web application for cancer patients that are in remission.'
             slug='bloom'
-            image='/bsloom.png'
+            image='/bloom.png'
           />
           <Card
             title='KMNI collaboration project'
