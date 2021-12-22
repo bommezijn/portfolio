@@ -12,10 +12,10 @@ const NavBar: FunctionComponent = () => {
           </li>
         </Link>
         <li>
-          <a>Projects</a>
+          <a href='#projects'>Projects</a>
         </li>
         <li>
-          <a>Contact</a>
+          <a href='#footer'>Contact</a>
         </li>
       </ul>
     </nav>

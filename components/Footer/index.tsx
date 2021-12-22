@@ -4,9 +4,9 @@ import styles from './style.module.css';
 
 const Footer: FunctionComponent = () => {
   return (
-    <footer className={styles.footer}>
-      <p>nethen bummezin</p>
-      <div className='social'>
+    <footer className={styles.footer} id='footer'>
+      <div className={styles.social}>
+        <h3>Resume && Socials</h3>
         <ul>
           <li>
             <Link href='https://read.cv/nb' passHref={true}>

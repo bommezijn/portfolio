@@ -4,10 +4,10 @@
   margin: 0;
   /* background-color: #000000;
   color: #ffffff; */
-  background-color: #ffcc0020;
+  background-color: var(--gray-100);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1em;
+  margin-top: 10rem;
 }
 
 /* Padding and Margin reset, does break the UL */
@@ -16,14 +16,37 @@
   margin: 0;
 } */
 
-.footer>p:first-child {
-  margin: 0;
+.social {
+  grid-column: 1/-1;
+  text-align: center;
 }
 
-.footer>* {
-  border: 1px solid red;
+.footer > * {
+  /* border: 1px solid red; */
 }
 
 .outro {
   grid-column: 1/-1;
+  text-align: center;
+}
+
+.social ul {
+  list-style: none;
+  padding: 0;
+}
+.social li {
+  padding: 0.2rem;
+}
+.social a {
+  transition: color 200ms ease-in border-bottom 600ms ease-out;
+}
+.social a:focus,
+.social a:hover {
+  color: var(--main-600);
+  border-bottom: 2px solid var(--main-600);
+}
+
+.outro:focus,
+.outro:hover {
+  color: red;
 }

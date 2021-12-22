@@ -8,7 +8,7 @@ const Home: NextPage = () => {
   return (
     <main className={styles.container}>
       <div id='content'>
-        <section className={styles.grid}>
+        <section className={styles.grid} id='projects'>
           <article className={`${styles.intro}`}>
             <div className={styles.titleContainer}>
               <h2 className={styles.yellowGradient}>Nathan Bommezijn</h2>
