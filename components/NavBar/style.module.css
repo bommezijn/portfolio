@@ -1,0 +1,40 @@
+/* NAVBAR */
+.mildShadow {
+  box-shadow: 0 4px 6px -6px var(--gray-500);
+}
+
+.navBar > ul {
+  margin: 0;
+  padding: 0.75rem 1rem;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  /* color: rgba(var(--secondary-400), 1); */
+  cursor: pointer;
+}
+
+.navBar ul li:first-of-type {
+  /* background-color: blueviolet; */
+  color: #000000;
+  font-weight: bold;
+}
+
+.navBar ul li:first-of-type:after:hover,
+.navBar ul li:first-of-type:after:active {
+  background-color: var(--main-500);
+  opacity: 0.5;
+}
+
+.navBar li {
+  padding: 0.5em 0.75rem;
+  border-radius: 0.5rem;
+  transition: opacity 0.2s ease-in, background-color 0.25s ease-in;
+}
+
+.navBar li:active,
+.navBar li:hover {
+  opacity: 1;
+  color: var(--black);
+  font-weight: 600;
+  background-color: var(--white-500);
+}

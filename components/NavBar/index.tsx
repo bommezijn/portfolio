@@ -1,0 +1,25 @@
+import React, { FunctionComponent } from 'react';
+import Link from 'next/link';
+import styles from './style.module.css';
+
+const NavBar: FunctionComponent = () => {
+  return (
+    <nav className={`${styles.navBar} ${styles.mildShadow}`}>
+      <ul>
+        <Link href='/' passHref>
+          <li>
+            <a>Bommezijn</a>
+          </li>
+        </Link>
+        <li>
+          <a href='#projects'>Projects</a>
+        </li>
+        <li>
+          <a href='#footer'>Contact</a>
+        </li>
+      </ul>
+    </nav>
+  );
+};
+
+export default NavBar;

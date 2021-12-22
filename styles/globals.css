@@ -1,0 +1,74 @@
+html,
+body {
+  scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+  /* font-family: 'Fira Sans', sans-serif; */
+  font-family: 'Fira Sans', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2 {
+  font-family: 'Noto Serif', serif;
+  line-height: 1.1;
+}
+
+p {
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+  color: var(--gray-600);
+}
+
+*:focus {
+  border: 2px solid red;
+}
+
+:root {
+  /* FFCC00 */
+  --main-100: #ffeda3;
+  --main-200: #ffe47a;
+  --main-300: #ffdc52;
+  --main-400: #ffd429;
+  --main-500: #ffcc00;
+  --main-600: #c79f00;
+  /* WHITE */
+  --white: #ffffff;
+  --white-500: #f3f3f3;
+  --white-600: #d7d7d7;
+  /* GRAY */
+  --gray-100: #fcfcfc;
+  --gray-200: #e7e7e7;
+  --gray-300: #d3d3d3;
+  --gray-400: #bebebe;
+  --gray-500: #aaaaaa;
+  --gray-600: #8e8e8e;
+  /* BLACK */
+  --black-100: #525252;
+  --black-200: #3d3d3d;
+  --black-300: #292929;
+  --black-400: #141414;
+  --black: #000000;
+  /* ACCENT */
+  --secondary-100: #a3b6ff;
+  --secondary-200: #7a95ff;
+  --secondary-300: #5274ff;
+  --secondary-400: rgb(41, 84, 255);
+  --secondary-500: #0033ff;
+  --secondary-600: #0028c7;
+  /* ACCENT 2 */
+  --tertary-100: #a3ffed;
+  --tertary-200: #7affe4;
+  --tertary-300: #52ffdc;
+  --tertary-400: #29ffd4;
+  --tertary-500: #00ffcc;
+  --tertary-600: #00c79f;
+}
