@@ -11,13 +11,10 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  color: var(--gray-600);
+
 }
 
-h1,
-h2 {
-  font-family: 'Noto Serif', serif;
-  line-height: 1.1;
-}
 
 p {
   line-height: 1.5;
@@ -25,7 +22,6 @@ p {
 
 * {
   box-sizing: border-box;
-  color: var(--gray-600);
 }
 
 *:focus {
