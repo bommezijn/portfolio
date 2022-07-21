@@ -11,10 +11,13 @@ const NavBar: FunctionComponent = () => {
             <a>Bommezijn</a>
           </li>
         </Link>
-        <li>
+        <li className={styles.linkItem}>
+          <a href='#projects'>About</a>
+        </li>
+        <li className={styles.linkItem}>
           <a href='#projects'>Projects</a>
         </li>
-        <li>
+        <li className={styles.linkItem}>
           <a href='#footer'>Contact</a>
         </li>
       </ul>
