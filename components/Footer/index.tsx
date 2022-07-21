@@ -26,7 +26,7 @@ const Footer: FunctionComponent = () => {
         </ul>
       </div>
       <p className={styles.outro}>
-        Made with ♥ by <a href='https://github.com/bommezijn'>Nathan</a>
+        powered ⚡️ by <a href='https://github.com/bommezijn'>Nathan</a>
       </p>
     </footer>
   );
