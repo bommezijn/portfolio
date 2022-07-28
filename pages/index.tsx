@@ -10,7 +10,7 @@ import bloom from '../public/bloom.png';
 const Home: NextPage = () => {
   return (
     <div className={styles.container}>
-      <Hero name="nathan" />
+      <Hero name="nathan" colour="#ffcc00" />
       <section className={styles.introductory}>
         <Image
           alt="some image of my face"
