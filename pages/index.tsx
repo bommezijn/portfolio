@@ -11,14 +11,7 @@ const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <Hero name="nathan" colour="#ffcc00" />
-      <section className={styles.introductory}>
-        <Image
-          alt="some image of my face"
-          src={bloom}
-          placeholder="blur"
-          width={1200}
-          height={400}
-        />
+      <section id="about" className={styles.introductory}>
         <article>
           <p>
             <h2>Nathan Bommezijn</h2>
@@ -27,17 +20,15 @@ const Home: NextPage = () => {
             applications and enhancing my toolbelt.
           </p>
         </article>
-      </section>
-
-      <section>
-        <h1>About me</h1>
-        <p>Who am I? what are my passions</p>
-        <p>
-          I'm a {age()} year student living in Amersfoort, The Netherlands. I
-          have a passion for development and (minimal) design since I was young
-          and would like to apply that passion to the web for the rest to see
-          and experience.
-        </p>
+        <article>
+          <h2>Who am I?</h2>
+          <p>
+            I'm a {age()} year student living in Amersfoort, The Netherlands. I
+            have a passion for development and (minimal) design since I was
+            young and would like to apply that passion to the web for the rest
+            to see and experience.
+          </p>
+        </article>
       </section>
       <section>
         <h1>Highlighted projects</h1>
