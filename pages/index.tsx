@@ -30,9 +30,33 @@ const Home: NextPage = () => {
           </p>
         </article>
       </section>
-      <section>
-        <h1>Highlighted projects</h1>
-        <p>Projects that I learned the most from</p>
+      <section id="projects">
+        <hgroup>
+          <h1>Highlighted projects</h1>
+          <p>A few recent projects that are worth mentioning.</p>
+        </hgroup>
+        <div className={'styles.highlightProjects'}>
+          <Card
+            title={'CMD Mid Term Accreditatie'}
+            shortDesc={
+              'The final project for the minor I was following, here we had to create a web-app that works with a headless CMS and a frontend application of our choosing, the team and I decided to go for NUXT.js. The requirement for the application was that it was accessible and readable for all future readers.'
+            }
+            slug="midtermacc"
+            image={
+              'https://raw.githubusercontent.com/KaivWezel/cmda-mid-term/main/Assets%20rm/Header-readme.jpg'
+            }
+          />
+          <Card
+            title={'Frontend Applications'}
+            shortDesc={
+              'The final course of a three course program, where we learn about data manipulation, paradigms, and working with frameworks and libraries such as D3.js and React.'
+            }
+            slug="frontendapplications"
+            image={
+              'https://user-images.githubusercontent.com/13199349/144448851-54874811-f230-4f70-9220-7ad0a2988cee.gif'
+            }
+          />
+        </div>
 
         <p>List overview from projects via github</p>
       </section>
