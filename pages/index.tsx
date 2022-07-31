@@ -5,8 +5,6 @@ import Hero from '../components/Hero';
 import styles from '../styles/Home.module.css';
 import age from '../utilities/getAge';
 
-import bloom from '../public/bloom.png';
-
 const Home: NextPage = () => {
   return (
     <div className={styles.container}>
@@ -35,7 +33,7 @@ const Home: NextPage = () => {
           <h1>Highlighted projects</h1>
           <p>A few recent projects that are worth mentioning.</p>
         </hgroup>
-        <div className={'styles.highlightProjects'}>
+        <div className={styles.highlightProjects}>
           <Card
             title={'CMD Mid Term Accreditatie'}
             shortDesc={

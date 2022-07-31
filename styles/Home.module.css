@@ -18,6 +18,11 @@
   gap: 1rem;
 }
 
+.highlightProjects {
+  display: grid;
+  gap: 1rem;
+}
+
 @media screen and (min-width: 640px) {
   .container {
     max-width: 100%;
@@ -35,9 +40,8 @@
     grid-auto-flow: column;
     grid-auto-columns: minmax(260px, 1fr);
   }
-}
 
-.highlightProjects {
-  display: grid;
-  grid-template-rows: repeat(auto-fill, minmax(240px, 1fr));
+  .highlightProjects {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
 }
