@@ -23,7 +23,7 @@ const Card = (props: CardProps) => {
   return (
     <Link passHref href={`/projects/${encodeURIComponent(props.slug)}`}>
       <article className={styles.card}>
-        <div className="cardImage">
+        <div className='cardImage'>
           <Image
             className={styles.cardImage}
             src={`${props.image}`}
