@@ -1,6 +1,21 @@
 .card {
-  max-width: 50rem;
-  border-radius: 4px;
+  /* max-width: 50rem; */
+  display: block;
+  border-radius: 6px;
   background-color: #fff;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in;
+}
+.card:hover {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  transform: scale3d(1.02, 1.02, 1);
+  cursor: pointer;
+}
+
+.cardImage {
+  border-radius: 6px 6px 0px 0px;
+}
+
+.cardContent {
+  padding: 0.5rem 1rem;
 }
