@@ -6,7 +6,7 @@ type HeroProps = {
   colour: string;
 };
 
-const Hero: FunctionComponent = ({ name, colour }: any) => {
+const Hero: FunctionComponent<HeroProps> = ({ name, colour }: any) => {
   return (
     <div className={styles.introCon}>
       <div className={styles.heroCon}>
