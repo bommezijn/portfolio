@@ -1,61 +1,92 @@
 import type { NextPage } from 'next';
-import Head from 'next/head';
-import Image from 'next/image';
+
 import Card from '../components/Card';
+import Hero from '../components/Hero';
 import styles from '../styles/Home.module.css';
+import age from '../utilities/getAge';
 
 const Home: NextPage = () => {
   return (
-    <main className={styles.container}>
-      <div id='content'>
-        <section className={styles.grid} id='projects'>
-          <article className={`${styles.intro}`}>
-            <div className={styles.titleContainer}>
-              <h2 className={styles.yellowGradient}>Nathan Bommezijn</h2>
-              <p>Digital Designer</p>
-            </div>
-            <p className={styles.lead}>
-              Upcoming digital designer whom currently is a student that builds
-              things for the web. Currently, I&apos;m focussing on creating
-              <span> accessible applications and creative coding.</span>
-            </p>
-          </article>
-          <header className={styles.introCard}>
-            <h3 className={styles.backdrop}>PROJECTS</h3>
-            <p>
-              The latest curated list of projects in which I have worked on.
-              When clicking on the project you will be navigated to the project
-              itself.
-            </p>
-          </header>
+    <div className={styles.container}>
+      <Hero name='nathan' colour='#ffcc00' />
+      <section id='about' className={styles.introductory}>
+        <article>
+          <p>
+            <h2>Nathan Bommezijn</h2>
+            Upcoming digital designer whom currently is a student that builds
+            things for the web. Currently, I&apos;m focussing on creating
+            accessible applications and enhancing my toolbelt.
+          </p>
+        </article>
+        <article>
+          <h2>Who am I?</h2>
+          <p>
+            I&apos;m a {age()} year student living in Amersfoort, The
+            Netherlands. I have a passion for development and (minimal) design
+            since I was young and would like to apply that passion to the web
+            for the rest to see and experience.
+          </p>
+        </article>
+      </section>
+      <section id='projects'>
+        <hgroup>
+          <h1>Recent projects</h1>
+          <p>Recent projects that I have worked on and are worth mentioning.</p>
+        </hgroup>
+        <div className={styles.highlightProjects}>
           <Card
-            title='Actor Popularity Visualisation'
-            shortDesc='A data visualisation made with d3.js and an external API for the data.'
-            slug='frontend-data'
-            image='https://user-images.githubusercontent.com/13199349/142292566-a40c4544-bcff-420b-a116-bb2e332df6bd.gif'
+            title={'CMD Mid Term Accreditatie'}
+            shortDesc={
+              'The final project for the minor I was following, here we had to create a web-app that works with a headless CMS and a frontend application of our choosing, the team and I decided to go for NUXT.js. The requirement for the application was that it was accessible and readable for all future readers.'
+            }
+            slug='midtermacc'
+            image={
+              'https://raw.githubusercontent.com/KaivWezel/cmda-mid-term/main/Assets%20rm/Header-readme.jpg'
+            }
           />
           <Card
-            title='Human Centered Design'
-            shortDesc='A project where we researched, iterated and developed for people with "disabilities"'
+            title={'Frontend Applications'}
+            shortDesc={
+              'The final course of a three course program, where we learn about data manipulation, paradigms, and working with frameworks and libraries such as D3.js and React.'
+            }
+            slug='frontendapplications'
+            image={
+              'https://user-images.githubusercontent.com/13199349/144448851-54874811-f230-4f70-9220-7ad0a2988cee.gif'
+            }
+          />
+        </div>
+
+        <hgroup>
+          <h1>Other projects</h1>
+          <p>
+            For more projects and code, check out my{' '}
+            <a href='github.com/bommezijn'>github</a>
+          </p>
+        </hgroup>
+        <div className={styles.highlightProjects}>
+          <Card
+            title={'Human centered design'}
+            shortDesc={
+              'A course from my minor where I was designing and developing in an iterative manner for a person with a disability (exclusive design). The requirement for this course was to create something that the client is content with the product.'
+            }
             slug='hcd'
-            image='https://user-images.githubusercontent.com/13199349/147109841-6dda85e8-7b1b-4c7c-81d2-17551d88af71.png'
+            image={
+              'https://user-images.githubusercontent.com/13199349/116502427-c0ab5b80-a8b3-11eb-9143-bae6403daf5a.png'
+            }
           />
           <Card
-            title='Bloom collaboration project'
-            shortDesc='A collaboration project where we created a web application for cancer patients that are in remission.'
-            slug='bloom'
-            image='/bloom.png'
+            title={'Browser Technologies'}
+            shortDesc={
+              'Browser Technologies is a course from the minor that I was following and it teaches you about the implementation of progressive enhancement and browser technologies. In this project I wrote a questionnaire that is progressively enhanced and uses the local storage API to store the results in the browser to finish the questionnaire at a later point.'
+            }
+            slug='brot'
+            image={
+              'https://user-images.githubusercontent.com/13199349/169404329-2f16f1d1-9f33-482b-9d42-628076382609.png'
+            }
           />
-          <Card
-            title='KMNI collaboration project'
-            shortDesc='Team project where we created a data visualisation to show the correlation between CO2 and COVID-19'
-            slug='kmni'
-            image='/tropomi.png'
-          />
-          {/* loop to add X amount of projects with title, desc. photo? */}
-        </section>
-      </div>
-    </main>
+        </div>
+      </section>
+    </div>
   );
 };
 

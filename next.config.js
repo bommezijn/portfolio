@@ -2,13 +2,17 @@
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: ['user-images.githubusercontent.com'],
+    domains: [
+      'user-images.githubusercontent.com',
+      'raw.githubusercontent.com',
+      'github.com',
+    ],
   },
   async redirects() {
     return [
       {
-        source: '/projects/frontend-data',
-        destination: 'https://bommezijn.github.io/frontend-data/',
+        source: '/projects/frontendapplications',
+        destination: 'https://bommezijn.github.io/frontend-applications/',
         permanent: false,
       },
       {
@@ -17,13 +21,23 @@ module.exports = {
         permanent: false,
       },
       {
+        source: '/projects/midtermacc',
+        destination: 'https://github.com/KaivWezel/cmda-mid-term',
+        permanent: false,
+      },
+      {
+        source: '/projects/brot',
+        destination: 'https://github.com/bommezijn/browser-technologies-2122',
+        permanent: false,
+      },
+      {
         source: '/projects/bloom',
-        destination: 'https://bloom-blush.vercel.app/',
+        destination: 'https://github.com/sjagoori/bloom',
         permanent: false,
       },
       {
         source: '/projects/kmni',
-        destination: 'https://knmi-sjagoori.vercel.app/',
+        destination: 'https://github.com/sjagoori/KNMI',
         permanent: false,
       },
     ];

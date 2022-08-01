@@ -6,7 +6,10 @@ const Footer: FunctionComponent = () => {
   return (
     <footer className={styles.footer} id='footer'>
       <div className={styles.social}>
-        <h3>Resume && Socials</h3>
+        <hgroup>
+          <h3>Resume && Socials</h3>
+          <p></p>
+        </hgroup>
         <ul>
           <li>
             <Link href='https://read.cv/nb' passHref={true}>
@@ -23,10 +26,15 @@ const Footer: FunctionComponent = () => {
               <a>LinkedIn</a>
             </Link>
           </li>
+          <li>
+            <Link href='mailto:nathanbommezijn@gmail.com' passHref={true}>
+              <a>email me</a>
+            </Link>
+          </li>
         </ul>
       </div>
       <p className={styles.outro}>
-        Made with ♥ by <a href='https://github.com/bommezijn'>Nathan</a>
+        powered ⚡️ by <a href='https://github.com/bommezijn'>Nathan</a>
       </p>
     </footer>
   );
