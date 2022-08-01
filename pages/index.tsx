@@ -30,8 +30,8 @@ const Home: NextPage = () => {
       </section>
       <section id="projects">
         <hgroup>
-          <h1>Highlighted projects</h1>
-          <p>A few recent projects that are worth mentioning.</p>
+          <h1>Recent projects</h1>
+          <p>Recent projects that I have worked on and are worth mentioning.</p>
         </hgroup>
         <div className={styles.highlightProjects}>
           <Card
@@ -56,7 +56,35 @@ const Home: NextPage = () => {
           />
         </div>
 
-        <p>List overview from projects via github</p>
+        <hgroup>
+          <h1>Other projects</h1>
+          <p>
+            For more projects and code, check out my{' '}
+            <a href="github.com/bommezijn">github</a>
+          </p>
+        </hgroup>
+        <div className={styles.highlightProjects}>
+          <Card
+            title={'Human centered design'}
+            shortDesc={
+              'A course from my minor where I was designing and developing in an iterative manner for a person with a disability (exclusive design). The requirement for this course was to create something that the client is content with the product.'
+            }
+            slug="hcd"
+            image={
+              'https://user-images.githubusercontent.com/13199349/116502427-c0ab5b80-a8b3-11eb-9143-bae6403daf5a.png'
+            }
+          />
+          <Card
+            title={'Browser Technologies'}
+            shortDesc={
+              'Browser Technologies is a course from the minor that I was following and it teaches you about the implementation of progressive enhancement and browser technologies. In this project I wrote a questionnaire that is progressively enhanced and uses the local storage API to store the results in the browser to finish the questionnaire at a later point.'
+            }
+            slug="brot"
+            image={
+              'https://user-images.githubusercontent.com/13199349/169404329-2f16f1d1-9f33-482b-9d42-628076382609.png'
+            }
+          />
+        </div>
       </section>
     </div>
   );
