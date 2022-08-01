@@ -21,6 +21,16 @@ module.exports = {
         permanent: false,
       },
       {
+        source: '/projects/midtermacc',
+        destination: 'https://github.com/KaivWezel/cmda-mid-term',
+        permanent: false,
+      },
+      {
+        source: '/projects/brot',
+        destination: 'https://github.com/bommezijn/browser-technologies-2122',
+        permanent: false,
+      },
+      {
         source: '/projects/bloom',
         destination: 'https://github.com/sjagoori/bloom',
         permanent: false,
@@ -28,11 +38,6 @@ module.exports = {
       {
         source: '/projects/kmni',
         destination: 'https://github.com/sjagoori/KNMI',
-        permanent: false,
-      },
-      {
-        source: '/projects/midtermacc',
-        destination: 'https://github.com/KaivWezel/cmda-mid-term',
         permanent: false,
       },
     ];
