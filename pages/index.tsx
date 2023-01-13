@@ -11,8 +11,8 @@ const Home: NextPage = () => {
       <Hero name='nathan' colour='#ffcc00' />
       <section id='about' className={styles.introductory}>
         <article>
-          <p>
             <h2>Nathan Bommezijn</h2>
+          <p>
             Upcoming digital designer whom currently is a student that builds
             things for the web. Currently, I&apos;m focussing on creating
             accessible applications and enhancing my toolbelt.
