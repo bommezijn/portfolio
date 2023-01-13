@@ -19,6 +19,9 @@ const NavBar: FunctionComponent = () => {
           <a href='#projects'>Projects</a>
         </li>
         <li className={styles.linkItem}>
+          <a href='/art'>Art</a>
+        </li>
+        <li className={styles.linkItem}>
           <a href='#footer'>Contact</a>
         </li>
       </ul>
