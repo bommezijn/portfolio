@@ -7,8 +7,8 @@ const config = {
    * https://nextjs.org/docs/basic-features/environment-variables
    **/
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || "production",
-  // projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
-  projectId: 'sbeabcc1',
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
+  // projectId: 'sbeabcc1',
   apiVersion: "2021-08-11", // or today's date for latest
   /**
    * Set useCdn to `false` if your application require the freshest possible
