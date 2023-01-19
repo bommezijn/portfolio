@@ -18,6 +18,7 @@ interface content {
   image: {
     url: string
   }
+  children: React.ReactNode
 }
 
 const ArtPiece: NextPage<{ content: content }> = ( {content} ) => {
