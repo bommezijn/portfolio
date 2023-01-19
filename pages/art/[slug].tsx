@@ -18,7 +18,6 @@ interface content {
   image: {
     url: string
   }
-  children: React.ReactNode
 }
 
 const ArtPiece: NextPage<{ content: content }> = ( {content} ) => {
@@ -56,12 +55,8 @@ export async function getStaticPaths() {
   }
 }
 
-type Parameters = {
-  slug: string
-}
-
 const client = createClient(config)
-export async function getStaticProps(params: any) {
+export async function getStaticProps({ params }: any) {
   const { slug } = params
   const content = await client.fetch(groq`
     *[_type == "post" && slug.current == "${slug}"][0]
