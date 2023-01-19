@@ -19,7 +19,10 @@ const NavBar: FunctionComponent = () => {
           <a href='#projects'>Projects</a>
         </li>
         <li className={styles.linkItem}>
-          <a href='/art'>Art</a>
+          {/* <a href='/art'>Art</a> */}
+          <Link href='/art' passHref>
+            <a>Art</a>
+          </Link>
         </li>
         <li className={styles.linkItem}>
           <a href='#footer'>Contact</a>

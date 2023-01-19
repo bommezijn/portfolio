@@ -1,9 +1,21 @@
 import type { NextPage } from 'next';
 import config from '../../utilities/sanityClient';
 import { createClient, groq } from 'next-sanity';
+import { Key, ReactChild, ReactFragment, ReactPortal } from 'react';
 // import styles from '../styles/art.module.css'
 
-const ArtGallery: NextPage = ({posts}) => {
+interface posts {
+  _id: Key | null | undefined,
+  'categories': string[],
+  'img': string,
+  slug: {
+    current: any
+  },
+  title: boolean | ReactChild | ReactFragment | ReactPortal | null | undefined,
+  
+}
+
+const ArtGallery: NextPage<{posts: posts[]}> = ({posts}) => {
   return (
     <>
      <header>
@@ -12,7 +24,7 @@ const ArtGallery: NextPage = ({posts}) => {
       <main>
         {posts.length > 0 && (
           <ul>
-            {posts.map((post) => (
+            {posts.map((post: { _id: Key | null | undefined; slug: { current: any; }; img: any; title: boolean | ReactChild | ReactFragment | ReactPortal | null | undefined; categories: any[]; }) => (
               <li key={post._id}>
                 <a href={`/art/${post.slug.current}`}>
                   <img src={`${post.img}`} alt="" />
@@ -35,10 +47,9 @@ const ArtGallery: NextPage = ({posts}) => {
         )}
         {!(posts.length > 0) && (
           <div>
-            <div>¯\_(ツ)_/¯</div>
+            <div>ohoh</div>
             <p>
-              Your data will show up here when you've configured everything
-              correctly
+              Your data will show up here when you&sbquo;ve configured everything correctly
             </p>
           </div>
         )}
