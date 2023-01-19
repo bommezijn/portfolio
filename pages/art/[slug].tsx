@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import config from '../../utilities/sanityClient';
 import { createClient, groq } from 'next-sanity';
 import {PortableText} from '@portabletext/react';
+import { ReactNode } from 'react';
 // import styles from '../styles/art.module.css'
 
 interface content {
@@ -17,7 +18,8 @@ interface content {
   }[],
   image: {
     url: string
-  }
+  },
+  children: ReactNode;
 }
 
 const ArtPiece: NextPage<{ content: content }> = ( {content} ) => {
