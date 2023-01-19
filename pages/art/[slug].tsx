@@ -14,16 +14,16 @@ const ArtPiece: NextPage = ({ content }) => {
         <a href=""></a>
         <section>
           <header>
-            <h1>{content.title}</h1>
-            <p>{content.author.name}</p>
+            <h1>{content?.title}</h1>
+            <p>{content?.author.name}</p>
           </header>
           <article>
-            <img src={content.image.url} alt="" />
-            <PortableText value={content.body} />
+            <img src={content?.image.url} alt="" />
+            <PortableText value={content?.body} />
           </article>
         </section>
         <section>
-          <pre>{JSON.stringify(content, null, 2)}</pre>
+          {/* <pre>{JSON.stringify(content, null, 2)}</pre> */}
         </section>
       </main>
     </>
