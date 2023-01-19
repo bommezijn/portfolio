@@ -5,7 +5,22 @@ import { createClient, groq } from 'next-sanity';
 import {PortableText} from '@portabletext/react';
 // import styles from '../styles/art.module.css'
 
-const ArtPiece: NextPage = ({ content }) => {
+interface content {
+  title: string,
+  author: {
+    name: string
+  },
+  body: any,
+  categories: {
+    title: string,
+    description: string,
+  }[],
+  image: {
+    url: string
+  }
+}
+
+const ArtPiece: NextPage<{ content: content }> = ( {content} ) => {
   const router = useRouter();
   const { slug } = router.query;
   return (
@@ -40,8 +55,12 @@ export async function getStaticPaths() {
   }
 }
 
+type Parameters = {
+  slug: string
+}
+
 const client = createClient(config)
-export async function getStaticProps({ params }) {
+export async function getStaticProps(params: any) {
   const { slug } = params
   const content = await client.fetch(groq`
     *[_type == "post" && slug.current == "${slug}"][0]
