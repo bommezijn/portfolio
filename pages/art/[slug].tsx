@@ -6,7 +6,7 @@ import config from '../../utilities/sanityClient';
 import { createClient, groq } from 'next-sanity';
 import {PortableText} from '@portabletext/react';
 import {useNextSanityImage} from 'next-sanity-image'
-import { SanityImage } from 'sanity-image';
+// import { SanityImage } from 'sanity-image';
 
 import styles from '../art/blogpost.module.css'
 
