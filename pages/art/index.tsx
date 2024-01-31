@@ -2,7 +2,7 @@ import type { NextPage } from 'next';
 import config from '../../utilities/sanityClient';
 import { createClient, groq } from 'next-sanity';
 import { Key, ReactChild, ReactFragment, ReactPortal } from 'react';
-// import styles from '../styles/art.module.css'
+import styles from '../../styles/ArtIndex.module.css'
 
 interface posts {
   _id: Key | null | undefined,
@@ -18,22 +18,26 @@ interface posts {
 const ArtGallery: NextPage<{posts: posts[]}> = ({posts}) => {
   return (
     <>
+    <section className={styles.container}>
      <header>
         <h1>Artprojects</h1>
+        <p>Blogposts created with sanity.io to document and faciliate the process of creative coding.</p>
       </header>
       <main>
         {posts.length > 0 && (
-          <ul>
+          <ul className={styles.blogGrid}>
             {posts.map((post: { _id: Key | null | undefined; slug: { current: any; }; img: any; title: boolean | ReactChild | ReactFragment | ReactPortal | null | undefined; categories: any[]; }) => (
-              <li key={post._id}>
+              <li className={styles.blogItem} key={post._id}>
                 <a href={`/art/${post.slug.current}`}>
                   <img src={`${post.img}`} alt="" />
-                  <h2>{post.title}</h2>
-                  <ul>
-                    {post.categories.map((category) => (
-                      <li key={category}>{category}</li>
-                    ))}
-                  </ul>
+                  <div className={styles.postInfo}>
+                    <h2>{post.title}</h2>
+                    <ul>
+                      {post.categories.map((category) => (
+                        <li key={category}>{category}</li>
+                        ))}
+                    </ul>
+                  </div>
                 </a>
               </li>
             ))}
@@ -54,6 +58,7 @@ const ArtGallery: NextPage<{posts: posts[]}> = ({posts}) => {
           </div>
         )}
       </main>
+      </section>
     </>
   )
 }
