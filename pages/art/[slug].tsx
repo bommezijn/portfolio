@@ -1,15 +1,15 @@
-import type { NextPage } from 'next';
+import { ReactNode } from 'react';
+import type  NextPage from 'next';
 import { useRouter } from 'next/router';
+import Image from 'next/image';
 import config from '../../utilities/sanityClient';
 import { createClient, groq } from 'next-sanity';
 import {PortableText} from '@portabletext/react';
-import { ReactNode } from 'react';
-
-import styles from '../../styles/art.module.css';
-
 import {useNextSanityImage} from 'next-sanity-image'
-import Image from 'next/image';
 import { SanityImage } from 'sanity-image';
+
+import styles from '../art/blogpost.module.css'
+
 
 // import Refractor from 'react-refractor';
 // import js from "refractor/lang/javascript";
@@ -32,7 +32,7 @@ interface content {
   children: ReactNode;
 }
 
-const SanityImage = ({ asset }) => {
+const SanityImage = ({ asset }: any) => {
   const imageProps = useNextSanityImage(config, asset);
 
   if (!imageProps) return null;
@@ -46,7 +46,7 @@ const SanityImage = ({ asset }) => {
 
 const myPortableTextComponents = {
   types: {
-    image: ({value}) => {
+    image: ({value}: any) => {
       return (
         <SanityImage className={styles.blogContent} {...value} />
       );
@@ -60,7 +60,7 @@ const myPortableTextComponents = {
 };
 
 
-const ArtPiece: NextPage<{ content: content }> = ( {content} ) => {
+const ArtPiece: NextPage<{ content: content }> = ( {content}: any ) => {
   const router = useRouter();
   const { slug } = router.query;
   return (

@@ -1,8 +1,8 @@
-import type { NextPage } from 'next';
+import type  NextPage from 'next';
 import config from '../../utilities/sanityClient';
 import { createClient, groq } from 'next-sanity';
 import { Key, ReactChild, ReactFragment, ReactPortal } from 'react';
-import styles from '../../styles/ArtIndex.module.css'
+import styles from '../art/artIndex.module.css'
 
 interface posts {
   _id: Key | null | undefined,
@@ -15,7 +15,7 @@ interface posts {
   
 }
 
-const ArtGallery: NextPage<{posts: posts[]}> = ({posts}) => {
+const ArtGallery: NextPage<{posts: posts[]}> = ({posts}: any) => {
   return (
     <>
     <section className={styles.container}>
