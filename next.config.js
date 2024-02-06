@@ -7,6 +7,7 @@ module.exports = {
       'user-images.githubusercontent.com',
       'raw.githubusercontent.com',
       'github.com',
+      'cdn.sanity.io'
     ],
   },
   async redirects() {
