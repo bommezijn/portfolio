@@ -86,7 +86,7 @@ const client = createClient(config)
 
 export async function getStaticProps() {
 
-  const posts = await client.fetch(groq`*[_type == "post" ]{_id, "categories":categories[]->title, "img":mainImage.asset->url, slug, title}`)
+  const posts = await client.fetch(groq`*[_type == "post" ]{_id, "categories":categories[]->title, "img":mainImage.asset->url, slug, title} | order(title asc)`)
   // console.log(posts)
   
   return {
