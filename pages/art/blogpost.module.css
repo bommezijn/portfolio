@@ -24,6 +24,10 @@ margin-bottom: 2em;
   align-items: center;
 }
 
+.author p {
+  margin-left: 0.5em;
+}
+
 .container .author img{
   display: inline;
   max-width: 32px;

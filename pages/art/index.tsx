@@ -84,11 +84,25 @@ const ArtGallery: NextPage<{posts: posts[]}> = ({posts}: any) => {
 
 const client = createClient(config)
 
-export async function getStaticProps() {
+// export async function getStaticProps() {
 
-  const posts = await client.fetch(groq`*[_type == "post" ]{_id, "categories":categories[]->title, "img":mainImage.asset->url, slug, title} | order(title asc)`)
-  // console.log(posts)
+//   const posts = await client.fetch(groq`*[_type == "post" ]{_id, "categories":categories[]->title, "img":mainImage.asset->url, slug, title} | order(title asc)`)
+//   // console.log(posts)
   
+//   return {
+//     props: {
+//       posts,
+//     }
+//   }
+// }
+
+export async function getServerSideProps() {
+  const posts = await client.fetch(
+    groq`
+      *[_type == "post"]{_id, "categories":categories[]->title, "img":mainImage.asset->url, slug, title} | order(title asc)
+    `
+  )
+
   return {
     props: {
       posts,

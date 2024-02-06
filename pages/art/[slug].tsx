@@ -82,13 +82,13 @@ const ArtPiece: NextPage<{ content: content }> = ( {content}: any ) => {
             <h1>{content?.title}</h1>
             <div className={styles.author}>
               {/* <Img src={content?.author.image.asset.url} alt="" /> */}
-              {/* <Img 
-                {...content?.author.image.asset.url}
-                layout='responsive'
-                sizes='(max-width: 800px) 100vw, 800px'
+              <Img 
+                src={content?.author.image.asset.url}
+                // layout='responsive'
+                // sizes='(max-width: 800px) 100vw, 800px'
                 width={500}
                 height={500}
-              /> */}
+              />
               <SanityImage {...content?.author.image.asset.url} />
               <p>{content?.author.name}</p>
             </div>
@@ -116,35 +116,67 @@ const ArtPiece: NextPage<{ content: content }> = ( {content}: any ) => {
   )
 }
 
-export async function getStaticPaths() {
-  return {
-    paths: [
-      // Object variant:
-      { params: { slug: 'slug' }},
-    ],
-    fallback: true,
-  }
-}
+// export async function getStaticPaths() {
+//   return {
+//     paths: [
+//       // Object variant:
+//       { params: { slug: 'slug' }},
+//     ],
+//     fallback: true,
+//   }
+// }
 
-export async function getStaticProps({ params }: any) {
+// export async function getStaticProps({ params }: any) {
+//   const client = configuredSanityClient
+//   const { slug } = params
+//   const content = await client.fetch(groq`
+//     *[_type == "post" && slug.current == "${slug}"][0]
+//     {
+//       title,
+//       author->{name,
+//         "image": image{
+//           "asset": asset->
+//         }
+//       },
+//       body,
+//       categories[]->{title, description},
+//       "image":mainImage.asset->,
+//       codeField
+//     }
+//   `)
+//   // console.log(content)
+//   return {
+//     props: {
+//       content,
+//     }
+//   }
+// }
+
+export async function getServerSideProps({ params}: any) {
   const client = configuredSanityClient
   const { slug } = params
-  const content = await client.fetch(groq`
-    *[_type == "post" && slug.current == "${slug}"][0]
-    {
-      title,
-      author->{name,
-        "image": image{
-          "asset": asset->
-        }
-      },
-      body,
-      categories[]->{title, description},
-      "image":mainImage.asset->,
-      codeField
-    }
-  `)
-  // console.log(content)
+  const content = await client.fetch(
+    groq`
+      *[_type == "post" && slug.current == "${slug}"][0]
+      {
+        title,
+        author->{
+          name,
+          "image": image{
+            "asset": asset->
+          }
+        },
+        body,
+        categories[]->{
+          title,
+          description
+        },
+        "image":mainImage.asset->,
+        codeField
+      }
+    `
+  )
+
   return {
     props: {
       content,
