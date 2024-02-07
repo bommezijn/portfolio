@@ -86,7 +86,7 @@ const ArtPiece: NextPage<{ content: content }> = ({ content }: any) => {
             />
           </article>
         </section>
-        <section><pre>{JSON.stringify(content, null, 2)}</pre></section>
+        {/* <section><pre>{JSON.stringify(content, null, 2)}</pre></section> */}
       </main>
     </>
   );
