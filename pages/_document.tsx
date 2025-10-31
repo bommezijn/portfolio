@@ -34,6 +34,15 @@ class MyDocument extends Document {
             href='https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,700;1,700&display=swap'
             rel='stylesheet'
           />
+          {/* Google tag gtag.js */}
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-2FZSZR7314"></script>
+          <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-2FZSZR7314');
+          </script>
         </Head>
         <body>
           <Main />
