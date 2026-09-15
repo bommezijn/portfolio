@@ -5,9 +5,10 @@ import Link from 'next/link';
 
 type CardProps = {
   title: string;
-  shortDesc: string;
+  summary: string;
   slug: string;
-  image: string;
+  image?: string | null;
+  meta?: string;
 };
 
 /* 
@@ -22,20 +23,26 @@ const Card = (props: CardProps) => {
 
   return (
     <Link passHref href={`/projects/${encodeURIComponent(props.slug)}`}>
-      <a className={styles.card}>
+      <a
+        className={
+          props.image ? styles.card : `${styles.card} ${styles.textCard}`
+        }>
         <article>
-          <div>
-            <Image
-              className={styles.cardImage}
-              src={`${props.image}`}
-              alt={`A photo describing a project called ${props.title}`}
-              width={776}
-              height={475}
-            />
-          </div>
+          {props.image && (
+            <div>
+              <Image
+                className={styles.cardImage}
+                src={props.image}
+                alt={`A photo describing a project called ${props.title}`}
+                width={776}
+                height={475}
+              />
+            </div>
+          )}
           <div className={styles.cardContent}>
             <h3 className={styles.cardTitle}>{props.title}</h3>
-            <p className={styles.cardDescription}>{props.shortDesc}</p>
+            {props.meta && <p className={styles.cardMeta}>{props.meta}</p>}
+            <p className={styles.cardDescription}>{props.summary}</p>
           </div>
         </article>
       </a>

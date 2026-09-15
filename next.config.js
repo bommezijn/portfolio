@@ -26,7 +26,12 @@ module.exports = {
       },
       {
         source: '/projects/bloom',
-        destination: 'https://github.com/bommezijn/bloom',
+        destination: 'https://github.com/bommezijn/bloom-copy',
+        permanent: false,
+      },
+      {
+        source: '/projects/knmi',
+        destination: 'https://github.com/bommezijn/knmi',
         permanent: false,
       },
     ];

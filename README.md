@@ -21,6 +21,14 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
 
+## Adding a project
+Projects live as Markdown files in `content/projects`. Copy `_template.md`, rename it and remove `draft: true` to publish. The file name becomes the URL.
+
+- `type: case` gets its own page at `/projects/<file-name>`.
+- `type: project` is a card that links out through the redirects in `next.config.js`, so add a redirect with the same slug.
+
+Files that start with an underscore and files marked as draft are never published. Drafts are still visible in the public GitHub repo, so keep anything confidential out of them.
+
 ## Learn More
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 

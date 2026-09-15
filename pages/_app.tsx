@@ -10,6 +10,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Head>
         <title>Nathan Bommezijn</title>
         <meta
+          key='description'
           name='description'
           content='Portfolio of Nathan Bommezijn, T-shaped front-end developer based in Amsterdam.'
         />

@@ -20,3 +20,17 @@
 .cardContent {
   padding: 0.5rem 1rem;
 }
+
+.textCard {
+  border-top: 4px solid var(--main-500);
+}
+
+.textCard .cardContent {
+  padding: 1rem;
+}
+
+.cardMeta {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--black-100);
+}
