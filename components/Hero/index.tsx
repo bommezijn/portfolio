@@ -6,7 +6,7 @@ type HeroProps = {
   colour: string;
 };
 
-const Hero: FunctionComponent<HeroProps> = ({ name, colour }: any) => {
+const Hero: FunctionComponent<HeroProps> = ({ name, colour }) => {
   return (
     <div className={styles.introCon}>
       <div className={styles.heroCon}>
@@ -18,7 +18,7 @@ const Hero: FunctionComponent<HeroProps> = ({ name, colour }: any) => {
           />
         </svg>
         <h1>Code with {name}</h1>
-        <p>Front-end developer / minimalist / dog lover </p>
+        <p>T-shaped front-end developer / minimalist / dog lover</p>
       </div>
     </div>
   );

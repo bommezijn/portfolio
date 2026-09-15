@@ -7,14 +7,11 @@ const Footer: FunctionComponent = () => {
     <footer className={styles.footer} id='footer'>
       <div className={styles.social}>
         <hgroup>
-          <h3>Resume && Socials</h3>
-          <p></p>
+          <h3>Resume &amp; Socials</h3>
         </hgroup>
         <ul>
           <li>
-            <Link href='https://read.cv/nb' passHref={true}>
-              <a>resume</a>
-            </Link>
+            <a href='/cv-nathan-bommezijn.pdf'>resume (PDF, Dutch)</a>
           </li>
           <li>
             <Link href='https://github.com/bommezijn' passHref={true}>

@@ -3,7 +3,6 @@ import type { NextPage } from 'next';
 import Card from '../components/Card';
 import Hero from '../components/Hero';
 import styles from '../styles/Home.module.css';
-import age from '../utilities/getAge';
 
 const Home: NextPage = () => {
   return (
@@ -11,39 +10,28 @@ const Home: NextPage = () => {
       <Hero name='nathan' colour='#ffcc00' />
       <section id='about' className={styles.introductory}>
         <article>
+          <h2>Nathan Bommezijn</h2>
           <p>
-            <h2>Nathan Bommezijn</h2>
-            Upcoming digital designer whom currently is a student that builds
-            things for the web. Currently, I&apos;m focussing on creating
-            accessible applications and enhancing my toolbelt.
+            T-shaped front-end developer. I work across design, interaction
+            and technology, and go deep on building accessible interfaces for
+            the web.
           </p>
         </article>
         <article>
           <h2>Who am I?</h2>
           <p>
-            I&apos;m a {age()} year student living in Amersfoort, The
-            Netherlands. I have a passion for development and (minimal) design
-            since I was young and would like to apply that passion to the web
-            for the rest to see and experience.
+            I&apos;m a developer based in Amsterdam with a degree in
+            Communication and Multimedia Design from the HvA, and a background
+            in application development.
           </p>
         </article>
       </section>
       <section id='projects'>
         <hgroup>
-          <h1>Recent projects</h1>
+          <h2>Recent projects</h2>
           <p>Recent projects that I have worked on and are worth mentioning.</p>
         </hgroup>
         <div className={styles.highlightProjects}>
-          <Card
-            title={'CMD Mid Term Accreditatie'}
-            shortDesc={
-              'The final project for the minor I was following, here we had to create a web-app that works with a headless CMS and a frontend application of our choosing, the team and I decided to go for NUXT.js. The requirement for the application was that it was accessible and readable for all future readers.'
-            }
-            slug='midtermacc'
-            image={
-              'https://raw.githubusercontent.com/KaivWezel/cmda-mid-term/main/Assets%20rm/Header-readme.jpg'
-            }
-          />
           <Card
             title={'Frontend Applications'}
             shortDesc={
@@ -57,10 +45,10 @@ const Home: NextPage = () => {
         </div>
 
         <hgroup>
-          <h1>Other projects</h1>
+          <h2>Other projects</h2>
           <p>
             For more projects and code, check out my{' '}
-            <a href='github.com/bommezijn'>github</a>
+            <a href='https://github.com/bommezijn'>GitHub</a>
           </p>
         </hgroup>
         <div className={styles.highlightProjects}>

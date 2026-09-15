@@ -22,21 +22,23 @@ const Card = (props: CardProps) => {
 
   return (
     <Link passHref href={`/projects/${encodeURIComponent(props.slug)}`}>
-      <article className={styles.card}>
-        <div className='cardImage'>
-          <Image
-            className={styles.cardImage}
-            src={`${props.image}`}
-            alt={`A photo describing a project called ${props.title}`}
-            width={776}
-            height={475}
-          />
-        </div>
-        <div className={styles.cardContent}>
-          <h3 className={styles.cardTitle}>{props.title}</h3>
-          <p className={styles.cardDescription}>{props.shortDesc}</p>
-        </div>
-      </article>
+      <a className={styles.card}>
+        <article>
+          <div>
+            <Image
+              className={styles.cardImage}
+              src={`${props.image}`}
+              alt={`A photo describing a project called ${props.title}`}
+              width={776}
+              height={475}
+            />
+          </div>
+          <div className={styles.cardContent}>
+            <h3 className={styles.cardTitle}>{props.title}</h3>
+            <p className={styles.cardDescription}>{props.shortDesc}</p>
+          </div>
+        </article>
+      </a>
     </Link>
   );
 };

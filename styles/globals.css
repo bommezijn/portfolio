@@ -3,16 +3,18 @@ body {
   scroll-behavior: smooth;
   padding: 0;
   margin: 0;
-  /* font-family: 'Fira Sans', sans-serif; */
   font-family: 'Fira Sans', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
-  color: inherit;
   text-decoration: none;
-  color: var(--gray-600);
+  color: var(--black-100);
+}
 
+p a {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
 }
 
 
@@ -24,8 +26,9 @@ p {
   box-sizing: border-box;
 }
 
-*:focus {
-  border: 2px solid red;
+:focus-visible {
+  outline: 2px solid var(--secondary-500);
+  outline-offset: 2px;
 }
 
 :root {

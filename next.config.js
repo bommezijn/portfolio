@@ -4,7 +4,6 @@ module.exports = {
   images: {
     domains: [
       'user-images.githubusercontent.com',
-      'raw.githubusercontent.com',
       'github.com',
     ],
   },
@@ -12,17 +11,12 @@ module.exports = {
     return [
       {
         source: '/projects/frontendapplications',
-        destination: 'https://bommezijn.github.io/frontend-applications/',
+        destination: 'https://frontend-applications-eight.vercel.app/',
         permanent: false,
       },
       {
         source: '/projects/hcd',
         destination: 'https://github.com/bommezijn/human-centered-design-2021',
-        permanent: false,
-      },
-      {
-        source: '/projects/midtermacc',
-        destination: 'https://github.com/KaivWezel/cmda-mid-term',
         permanent: false,
       },
       {
@@ -32,12 +26,7 @@ module.exports = {
       },
       {
         source: '/projects/bloom',
-        destination: 'https://github.com/sjagoori/bloom',
-        permanent: false,
-      },
-      {
-        source: '/projects/kmni',
-        destination: 'https://github.com/sjagoori/KNMI',
+        destination: 'https://github.com/bommezijn/bloom',
         permanent: false,
       },
     ];

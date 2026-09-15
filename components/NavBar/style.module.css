@@ -9,15 +9,12 @@
   list-style-type: none;
   display: flex;
   justify-content: flex-end;
-  /* color: rgba(var(--secondary-400), 1); */
   cursor: pointer;
 }
 
 .navBar ul li:first-of-type {
-  /* background-color: blueviolet; */
   color: #000000;
   font-weight: bold;
-  /* justify-self: flex-start; */
   flex-grow: 1;
 }
 

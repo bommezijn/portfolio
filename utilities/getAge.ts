@@ -1,9 +1,12 @@
-
 const age = () => {
-  const currentDate = new Date().getFullYear();
-  const birthYear = new Date(Date.UTC(1997, 2, 21)).getFullYear();
-  const age = currentDate - birthYear;
-  return age;
+  const today = new Date();
+  const birthday = new Date(1997, 2, 21);
+  const years = today.getFullYear() - birthday.getFullYear();
+  const hadBirthdayThisYear =
+    today.getMonth() > birthday.getMonth() ||
+    (today.getMonth() === birthday.getMonth() &&
+      today.getDate() >= birthday.getDate());
+  return hadBirthdayThisYear ? years : years - 1;
 };
 const getYears = (date: Date) => {
   const currentYear = new Date().getFullYear();

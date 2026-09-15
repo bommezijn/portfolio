@@ -13,6 +13,11 @@
   max-width: 65ch;
 }
 
+.container hgroup h2 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
 .introductory {
   display: grid;
   gap: 1rem;
@@ -28,12 +33,6 @@
   .container {
     max-width: 100%;
   }
-  .hero {
-    padding: 2rem 2rem;
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
-  }
-
   .introductory {
     display: grid;
     gap: 1rem;
@@ -44,6 +43,5 @@
 
   .highlightProjects {
     grid-template-columns: repeat(2, minmax(240px, 1fr));
-    /* grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); */
   }
 }
