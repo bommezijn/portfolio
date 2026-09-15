@@ -24,6 +24,21 @@ export type Project = ProjectMeta & {
 
 const projectsDirectory = path.join(process.cwd(), 'content', 'projects');
 
+const escapeAttribute = (value: string) =>
+  value.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
+
+/* Case study images can be large screenshots, so load them lazily. */
+marked.use({
+  renderer: {
+    image({ href, title, text }) {
+      const titleAttribute = title ? ` title="${escapeAttribute(title)}"` : '';
+      return `<img src="${escapeAttribute(href)}" alt="${escapeAttribute(
+        text
+      )}"${titleAttribute} loading="lazy" decoding="async">`;
+    },
+  },
+});
+
 /* Files starting with an underscore, like the template, are never published. */
 const projectFileNames = () =>
   fs

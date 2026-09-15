@@ -36,6 +36,8 @@ const Card = (props: CardProps) => {
                 alt={`A photo describing a project called ${props.title}`}
                 width={776}
                 height={475}
+                objectFit='cover'
+                objectPosition='top'
               />
             </div>
           )}

@@ -1,12 +1,15 @@
 ---
 title: "Fnd, a community hub for front-end developers"
-summary: "My graduation project: a platform that helps junior developers choose tools and frameworks, maintained by the community itself."
+summary: "My graduation project: a platform that helps front-end developers, especially those starting out, find the right tools and frameworks for their project."
 type: case
 order: 1
-year: "2023–2024"
+year: "2023"
 role: "Research, concept and design"
+image: "/projects/fnd/cover.jpg"
 confidential: false
 ---
+
+![The Fnd homepage, with the quiz and results shown as a collage](/projects/fnd/cover.jpg)
 
 ## Why
 
@@ -16,35 +19,69 @@ The project started with a company that wanted to explore how micro-frontends co
 
 ## The design challenge
 
-How can junior front-end developers be guided by a digital interactive product to make better-informed choices about the technologies and tools in their stack? The goal was to let developers spend their time learning a technology instead of searching for the right one.
+How can front-end developers be guided by a digital interactive product to make better-informed choices about the technologies and tools in their stack? The goal was to let developers spend their time learning a technology instead of searching for the right one.
 
 ## Research
 
-I compared how information is shared on platforms like Reddit, Medium and dev.to. A few things stood out:
+I benchmarked how Dev.to, Medium, Reddit and Stack Overflow share information with their readers. All four are informative and filterable, but none of them focuses on finding the right tools for a project. A few other things stood out:
 
 - "Roadmap" is the most common way to show beginners a next step, but it rarely tells them what their own next step should be.
 - Search results mix current information with articles that are ten years old.
 - Topics are broad and rarely specific to front-end development.
 - Articles are written by people with a preferred framework, and most platforms give readers no way to push back.
 
-I interviewed junior developers, designers and experienced developers. Juniors knew very few tools, while experts had discovered too many over their careers. I also learned that the no-code community has its own set of tools, which I had missed.
+The Stack Overflow Developer Survey 2023 showed that both beginners and experienced developers learn mostly through online videos, blogs and forums. That is exactly where the information is most scattered.
+
+I interviewed two developers who are starting out, a designer moving into front-end and a CMD student, and two experienced front-end developers. Beginners knew very few tools, while experts had discovered too many over their careers. Experts also said they research tools at their desk, not on their phone, so I designed for desktop first. And I learned that the no-code community has its own set of tools, which I had missed.
+
+## Ideation
+
+I used the Disney method to look at the idea as a dreamer, a realist and a critic. The critic kept me grounded: AI can't give good advice from a small dataset, and without users there is no community, only me.
+
+At the Feedback Frenzy, where graduates present their research to peers and supervisors, I pitched three directions:
+
+1. **An interactive virtual world** that guides you to tools in a playful way. The feedback: fun, but a one-timer for a serious audience.
+2. **A game-show quiz** that could use AI to interpret open answers. The feedback: promising, but AI is a double-edged sword when the data behind it goes out of date.
+3. **A decision-tree quiz** inspired by Duolingo, where every answer narrows the topic. The feedback: the most logical of the three.
+
+Most people wanted the logic of the decision tree combined with the interaction of the quiz, so that became the concept.
 
 ## The concept
 
-Fnd is a compendium for front-end developers, focused on juniors because they benefit most. A quiz asks about your current or next project and suggests tools, with the reasoning behind each match, its pros and cons, and examples that are popular in the community. If you're not sure about a suggestion, it offers alternatives.
+Fnd has three parts: a quiz, a database and a community.
 
-I can't maintain a database like that alone, stay impartial, or keep it up to date. A community can. Users vote on the pros and cons of each tool, suggest edits that the community reviews, and outdated information is flagged visually so someone picks it up.
+The quiz asks about your experience and your current or next project. I explored it as a Typeform-like flow of questions and as a Duolingo-style decision tree, where every answer narrows the options.
 
-The prototype covers a homepage, the quiz, a filterable database with a page per tool, flows for adding a tool and suggesting an edit, and a community forum.
+![A quiz question asking whether you know the difference between frameworks and libraries](/projects/fnd/quiz-question.jpg)
 
-## Testing
+The result explains why a tool matches you, lists its pros and cons, and points to tutorials and videos that the community recommends. If you're not happy with the pick, it suggests alternatives, and flags the ones that are out of date.
 
-The first quiz was styled after Duolingo. Feedback showed that didn't suit developers, so the second version moved towards a Typeform-like format. I tested that version with both juniors and experts, and the response was largely positive.
+![The quiz result recommending React, with the reasons for the match, pros, cons and tutorials](/projects/fnd/quiz-results.jpg)
 
-The concept met eight of the nine requirements I set. The one it missed was saving results so you can find them again later.
+If you would rather search yourself, the database lists every tool with filters for category, language, GitHub stars, community rating and license. Tools whose information hasn't been updated in a while get a warning.
+
+![The database of tools, with filters on the left and a warning next to an outdated tool](/projects/fnd/database.jpg)
+
+![A tool page for React, with its links, stars, license, pros, cons and recommended videos](/projects/fnd/tool-page.jpg)
+
+Advice is only as good as the information behind it, so I drafted a method to assess every tool. It looks at how old a tool is, how easy its documentation is to find and when it was last updated, how much is written about it, whether it has a community and tutorials, its dependencies and integrations, and whether it's open source.
+
+That information can't stay current if one person maintains it. So anyone can add a tool by pasting its GitHub link, and a crawler fills in what it can. Suggested edits are posted to the community, where members vote on them and discuss them, and moderators check the data. The goal is to limit opinions, keep the data factual, and give less popular tools a fair chance next to the popular ones.
+
+![The form to add a new tool, starting from a GitHub link](/projects/fnd/add-tool.jpg)
+
+![The community page with posts, votes, tags and an edit suggestion](/projects/fnd/community.jpg)
+
+Building all of that in code wasn't feasible in 16 weeks, because the research and the assessment method came first. So I scoped the result to an interactive prototype that works out the key flows.
+
+## Where it ended
+
+The next steps were at least one more tested iteration of the concept, a system to assess tools that could eventually run automatically, and a final prototype with a product quality review.
+
+Ideally I would have built a working prototype in code. Beyond that, the concept could grow into a browser product with a stronger social side, and use crawlers or AI to gather information about tools without depending on what people submit.
 
 ## Looking back
 
-I wanted to build this in code, because bringing designs to life is my expertise. Switching projects midway added more research than I had hoped, and the prototype stayed a design. If I did it again, I would spend less time studying what already exists and more on a few key components, so there would be time to build them.
+I should have anticipated the situation with the company sooner, and explored alternatives before the graduation period started. I lost time I could have used to reframe the problem and the design challenge earlier.
 
-Still, I'm happy with the result: a concept that doesn't exist yet, and research that shows a real gap between sharing information and advising developers.
+Still, I'm happy with the research, and with discovering a real gap between sharing information and giving developers advice.
