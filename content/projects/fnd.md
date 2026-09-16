@@ -15,7 +15,7 @@ confidential: false
 
 Keeping up with the latest tech, frameworks and tools means scouring the most niche corners of the internet or scrolling through social media. My go-to sites are Awwwards, recent.design and Mobbin, but the information is scattered everywhere.
 
-The project started with a company that wanted to explore how micro-frontends could work for them. When that collaboration didn't continue, I took the project into my own hands and turned the question around: how do developers find the right frameworks and tools among dozens of options?
+The project began as a question about micro-frontends, a way of structuring software. When that starting point fell through, I took the project into my own hands and turned the question around: how do developers find the right frameworks and tools among dozens of options?
 
 ## The design challenge
 
@@ -82,6 +82,6 @@ Ideally I would have built a working prototype in code. Beyond that, the concept
 
 ## Looking back
 
-I should have anticipated the situation with the company sooner, and explored alternatives before the graduation period started. I lost time I could have used to reframe the problem and the design challenge earlier.
+I should have seen sooner that my original starting point wouldn't hold, and looked at alternatives before the graduation period began. I lost time I could have used to reframe the problem and the design challenge earlier.
 
 Still, I'm happy with the research, and with discovering a real gap between sharing information and giving developers advice.
